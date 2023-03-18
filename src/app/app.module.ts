@@ -8,6 +8,9 @@ import { DashboardRouteComponent } from './components/dashboard-route/dashboard-
 import { NavbarComponent } from './components/landing-page-route/components/navbar/navbar.component';
 import { HeroComponent } from './components/landing-page-route/components/hero/hero.component';
 import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
+import { GetdesktopComponent } from './components/landing-page-route/components/getdesktop/getdesktop.component';
+import { AboutComponent } from './components/landing-page-route/components/about/about.component';
+import { GetappComponent } from './components/landing-page-route/components/getapp/getapp.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,9 @@ import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
     DashboardRouteComponent,
     NavbarComponent,
     HeroComponent,
+    GetdesktopComponent,
+    AboutComponent,
+    GetappComponent,
   ],
   imports: [
     BrowserModule,
