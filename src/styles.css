@@ -10,6 +10,20 @@
     --primaryColor: #644FF6;
 }
 
+/* scroll bar style */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #644FF6;
+    border-radius: 8px;
+}
 
 
 @layer components {

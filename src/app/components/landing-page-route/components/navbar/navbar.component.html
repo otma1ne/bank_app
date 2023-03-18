@@ -1,13 +1,18 @@
 <nav class="fixed p-maxWidth w-full py-8 text-white bg-dark-bg z-10">
   <div class="flex justify-between">
-    <div class="flex items-center grow w-56">
+    <div
+      class="flex items-center grow w-56 cursor-pointer"
+      (click)="navigateToHome()"
+    >
       <img
         src="../../../assets/images/sitelogo-300x58.png"
         alt=""
         class="h-7"
       />
     </div>
-    <ul class="flex items-center justify-center gap-10 grow text-sm font-medium">
+    <ul
+      class="flex items-center justify-center gap-10 grow text-sm font-medium"
+    >
       <li>Home</li>
       <li>About</li>
       <li>Pricing</li>
@@ -15,7 +20,9 @@
       <li>Contact</li>
     </ul>
     <div class="flex gap-6 grow w-56 justify-end">
-      <button class="primary-btn">Get started</button>
+      <button class="primary-btn" (click)="navigateToSignin()">
+        Get started
+      </button>
       <button class="secondary-btn">Sign Up</button>
     </div>
   </div>

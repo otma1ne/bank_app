@@ -1,0 +1,48 @@
+<div class="flex flex-col py-10 pl-8 border-r h-screen">
+  <h3 class="text-2xl font-semibold">Findem</h3>
+  <ul class="flex flex-col mt-20">
+    <li
+      class="text-sm font-medium px-6 py-4 text-gray-600 flex items-center gap-3 border-l-4 border-white hover:bg-purple-50 hover:border-purple-50 cursor-pointer"
+      routerLink="./"
+      routerLinkActive="!bg-purple-50 !border-regal-blue !border-l-4 !text-regal-blue !font-semibold"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i-bs name="columns-gap" width="1.1rem" height="1.1rem"></i-bs>
+      Dashboard
+    </li>
+    <li
+      class="text-sm font-medium px-6 py-4 text-gray-600 flex items-center gap-3 border-l-4 border-white hover:bg-purple-50 hover:border-purple-50 cursor-pointer"
+      routerLink="./customers"
+      routerLinkActive="!bg-purple-50 !border-regal-blue !border-l-4 !text-regal-blue !font-semibold"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i-bs name="person" width="1.1rem" height="1.1rem"></i-bs>Customers
+    </li>
+    <li
+      class="text-sm font-medium px-6 py-4 text-gray-600 flex items-center gap-3 border-l-4 border-white hover:bg-purple-50 hover:border-purple-50 cursor-pointer"
+    >
+      <i-bs name="cash" width="1.1rem" height="1.1rem"></i-bs>Balance
+    </li>
+    <li
+      class="text-sm font-medium px-6 py-4 text-gray-600 flex items-center gap-3 border-l-4 border-white hover:bg-purple-50 hover:border-purple-50 cursor-pointer"
+    >
+      <i-bs name="ticket-detailed" width="1.1rem" height="1.1rem"></i-bs>Invoice
+    </li>
+    <li
+      class="text-sm font-medium px-6 py-4 text-gray-600 flex items-center gap-3 border-l-4 border-white hover:bg-purple-50 hover:border-purple-50 cursor-pointer"
+    >
+      <i-bs name="credit-card" width="1.1rem" height="1.1rem"></i-bs>Cards
+    </li>
+    <li
+      class="text-sm font-medium px-6 py-4 text-gray-600 flex items-center gap-3 border-l-4 border-white hover:bg-purple-50 hover:border-purple-50 cursor-pointer"
+    >
+      <i-bs name="clock-history" width="1.1rem" height="1.1rem"></i-bs>History
+    </li>
+    <li
+      class="text-sm font-medium px-6 py-4 text-gray-600 flex items-center gap-3 border-l-4 border-white hover:bg-purple-50 hover:border-purple-50 cursor-pointer"
+      (click)="logout()"
+    >
+      <i-bs name="box-arrow-left" width="1.1rem" height="1.1rem"></i-bs>Logout
+    </li>
+  </ul>
+</div>

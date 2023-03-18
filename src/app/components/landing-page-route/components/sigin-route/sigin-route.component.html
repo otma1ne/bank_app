@@ -1,0 +1,71 @@
+<div
+  class="p-maxWidth w-full h-screen bg-dark-bg bg-hero pt-32 text-white grid grid-cols-2 gap-20 items-center"
+>
+  <div>
+    <h5 class="text-2xl font-semibold">Welcome back !</h5>
+    <h3 class="text-4xl font-semibold mt-3">
+      Login to your
+      <span
+        class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-regal-blue"
+        >account</span
+      >
+    </h3>
+    <form
+      class="mt-10 flex flex-col gap-6"
+      [formGroup]="loginForm"
+      (submit)="submit()"
+    >
+      <div class="flex flex-col gap-3">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="Enter your Email"
+          class="bg-transparent border border-gray-600 text-sm px-4 py-3 rounded-lg"
+        />
+        <small
+          class="text-red-500"
+          *ngIf="
+            getControl('email')?.hasError('required') &&
+            getControl('email')?.touched
+          "
+        >
+          Email is required
+        </small>
+      </div>
+      <div class="flex flex-col gap-3">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          placeholder="Enter your Password"
+          class="bg-transparent border border-gray-600 text-sm px-4 py-3 rounded-lg"
+        />
+        <small
+          class="text-red-500"
+          *ngIf="
+            getControl('password')?.hasError('required') &&
+            getControl('password')?.touched
+          "
+        >
+          Password is required
+        </small>
+      </div>
+      <button
+        type="submit"
+        class="primary-btn w-min mt-6 disabled:opacity-50"
+        [disabled]="!canSubmit()"
+      >
+        Login
+      </button>
+    </form>
+  </div>
+  <div class="flex justify-center items-center">
+    <img
+      src="../../../../../assets/images/mobileMockup02-800x1744.png"
+      class="absolute h-[70%]"
+    />
+  </div>
+</div>

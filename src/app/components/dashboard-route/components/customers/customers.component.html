@@ -1,0 +1,44 @@
+<section class="py-8 px-16">
+  <div class="flex justify-between">
+    <h3 class="text-xl font-semibold">Customers</h3>
+    <button class="primary-btn flex items-center gap-2"> <i-bs name="plus-lg" class="text-white" /> Add Customer</button>
+  </div>
+  <div
+    class="table w-full mt-14 shadow-[0px_0px_20px_10px_#F7FAFC] border rounded-lg px-8"
+  >
+    <div class="table-header-group text-sm font-semibold">
+      <div class="table-row">
+        <div class="table-cell text-left !py-5">Picture</div>
+        <div class="table-cell text-left !py-5">Firstname</div>
+        <div class="table-cell text-left">lastname</div>
+        <div class="table-cell text-left">email</div>
+        <div class="table-cell text-right">actions</div>
+      </div>
+    </div>
+    <div class="table-row-group">
+      <div
+        *ngFor="let customer of customers; let index = index"
+        class="table-row text-sm font-medium "
+      >
+        <div class="table-cell !py-4">
+          <img
+            src="../../../../../assets/images/profil.png"
+            class="w-8 h-8 rounded-full"
+          />
+        </div>
+        <div class="table-cell !py-4 align-middle">
+          {{ customer.firstName }}
+        </div>
+        <div class="table-cell align-middle">{{ customer.lastName }}</div>
+        <div class="table-cell align-middle">{{ customer.email }}</div>
+        <div class="table-cell align-middle">
+          <div class="flex justify-end gap-4 text-gray-700">
+            <i-bs name="list" class="cursor-pointer"></i-bs>
+            <i-bs name="pencil-square" class="cursor-pointer"></i-bs>
+            <i-bs name="trash3-fill" class="text-red-400 cursor-pointer"></i-bs>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

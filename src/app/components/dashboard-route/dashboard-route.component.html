@@ -1,1 +1,9 @@
-<p>dashboard-route works!</p>
+<div class="w-full h-screen grid grid-cols-[260px_1fr]">
+  <app-sidebar></app-sidebar>
+  <div>
+    <app-navbar-dash></app-navbar-dash>
+    <div class="h-[calc(100vh-117px)] overflow-y-auto">
+      <router-outlet />
+    </div>
+  </div>
+</div>

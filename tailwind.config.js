@@ -11,7 +11,7 @@ module.exports = {
         hero: "url('src/assets/images/3D-Morph-Lines-7.png')",
       },
       padding: {
-        maxWidth: "0 120px",
+        maxWidth: "0 160px",
       },
     },
     fontFamily: {
