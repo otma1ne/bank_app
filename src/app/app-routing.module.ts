@@ -6,6 +6,7 @@ import { HomeRouteComponent } from './components/landing-page-route/components/h
 import { DashboardRouteComponent } from './components/dashboard-route/dashboard-route.component';
 import { DashboardComponent } from './components/dashboard-route/components/dashboard/dashboard.component';
 import { CustomersComponent } from './components/dashboard-route/components/customers/customers.component';
+import { CustomerDetailsComponent } from './components/dashboard-route/components/customer-details/customer-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -34,6 +35,10 @@ const routes: Routes = [
       {
         path: 'customers',
         component: CustomersComponent,
+      },
+      {
+        path: 'customers/:id',
+        component: CustomerDetailsComponent,
       },
     ],
   },

@@ -14,4 +14,8 @@ export class CustomerService {
   getCustomers(): Observable<Customer[]> {
     return this.http.get<Customer[]>(API_URL);
   }
+
+  getCustomerById(id: number): Observable<Customer> {
+    return this.http.get<Customer>(`${API_URL}/${id}`);
+  }
 }

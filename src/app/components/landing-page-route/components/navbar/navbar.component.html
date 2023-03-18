@@ -1,4 +1,6 @@
-<nav class="fixed p-maxWidth w-full py-8 text-white bg-dark-bg z-10">
+<nav
+  class="fixed p-maxWidth w-full py-8 text-white bg-dark-bg z-10 max-xl:p-maxWidthXl max-xl:py-8 max-lg:p-maxWidthL max-lg:py-8 max-md:p-maxWidthM max-md:py-8 max-sm:p-maxWidthS max-sm:py-8"
+>
   <div class="flex justify-between">
     <div
       class="flex items-center grow w-56 cursor-pointer"
@@ -11,7 +13,7 @@
       />
     </div>
     <ul
-      class="flex items-center justify-center gap-10 grow text-sm font-medium"
+      class="flex items-center justify-center gap-10 grow text-sm font-medium max-lg:fixed top-0 max-lg:h-screen max-lg:bg-dark-bg max-lg:flex-col max-lg:items-start max-lg:w-[30%] max-lg:min-w-[260px] max-lg:py-24 max-lg:px-8 max-lg:justify-start max-lg:-right-[100%]"
     >
       <li>Home</li>
       <li>About</li>
@@ -19,7 +21,7 @@
       <li>How it works</li>
       <li>Contact</li>
     </ul>
-    <div class="flex gap-6 grow w-56 justify-end">
+    <div class="flex gap-6 grow w-56 justify-end max-lg:hidden">
       <button class="primary-btn" (click)="navigateToSignin()">
         Get started
       </button>

@@ -33,7 +33,7 @@
         <div class="table-cell align-middle">{{ customer.email }}</div>
         <div class="table-cell align-middle">
           <div class="flex justify-end gap-4 text-gray-700">
-            <i-bs name="list" class="cursor-pointer"></i-bs>
+            <i-bs name="list" class="cursor-pointer" [routerLink]="['./', customer?.id]"></i-bs>
             <i-bs name="pencil-square" class="cursor-pointer"></i-bs>
             <i-bs name="trash3-fill" class="text-red-400 cursor-pointer"></i-bs>
           </div>

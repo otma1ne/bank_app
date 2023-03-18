@@ -19,6 +19,7 @@ import { DashboardComponent } from './components/dashboard-route/components/dash
 import { CustomersComponent } from './components/dashboard-route/components/customers/customers.component';
 import { NavbarDashComponent } from './components/dashboard-route/components/navbar-dash/navbar-dash.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CustomerDetailsComponent } from './components/dashboard-route/components/customer-details/customer-details.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     CustomersComponent,
     NavbarDashComponent,
+    CustomerDetailsComponent,
   ],
   imports: [
     BrowserModule,

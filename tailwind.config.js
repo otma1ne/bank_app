@@ -12,6 +12,10 @@ module.exports = {
       },
       padding: {
         maxWidth: "0 160px",
+        maxWidthXl: "0 120px",
+        maxWidthL: "0 80px",
+        maxWidthM: "0 40px",
+        maxWidthS: "0 20px",
       },
     },
     fontFamily: {
