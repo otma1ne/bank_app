@@ -20,6 +20,9 @@ import { CustomersComponent } from './components/dashboard-route/components/cust
 import { NavbarDashComponent } from './components/dashboard-route/components/navbar-dash/navbar-dash.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomerDetailsComponent } from './components/dashboard-route/components/customer-details/customer-details.component';
+import { CreateCustomerComponent } from './components/dashboard-route/components/create-customer/create-customer.component';
+import { ConfirmComponent } from './components/dashboard-route/components/customers/components/confirm/confirm.component';
+import { UpdateCostumerComponent } from './components/dashboard-route/components/update-costumer/update-costumer.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { CustomerDetailsComponent } from './components/dashboard-route/component
     CustomersComponent,
     NavbarDashComponent,
     CustomerDetailsComponent,
+    CreateCustomerComponent,
+    ConfirmComponent,
+    UpdateCostumerComponent,
   ],
   imports: [
     BrowserModule,

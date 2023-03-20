@@ -1,0 +1,27 @@
+<div
+  class="fixed top-0 left-0 w-full h-screen flex items-center justify-center"
+>
+  <div
+    class="absolute top-0 left-0 w-full h-full bg-black opacity-75 z-[-1]"
+    (click)="cancel()"
+  ></div>
+  <div class="bg-white rounded-lg p-10 max-w-sm">
+    <h3 class="text-[16px] font-semibold text-center">
+      Are you sure you want to delete {{ customer?.firstName }} ?
+    </h3>
+    <div class="flex gap-4 mt-10 justify-center">
+      <button
+        class="secondary-btn border-regal-blue text-regal-blue border-2"
+        (click)="cancel()"
+      >
+        Cancel
+      </button>
+      <button
+        class="primary-btn bg-red-500 border-red-500"
+        (click)="onDelete()"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>

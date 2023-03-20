@@ -7,6 +7,8 @@ import { DashboardRouteComponent } from './components/dashboard-route/dashboard-
 import { DashboardComponent } from './components/dashboard-route/components/dashboard/dashboard.component';
 import { CustomersComponent } from './components/dashboard-route/components/customers/customers.component';
 import { CustomerDetailsComponent } from './components/dashboard-route/components/customer-details/customer-details.component';
+import { CreateCustomerComponent } from './components/dashboard-route/components/create-customer/create-customer.component';
+import { UpdateCostumerComponent } from './components/dashboard-route/components/update-costumer/update-costumer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -37,8 +39,16 @@ const routes: Routes = [
         component: CustomersComponent,
       },
       {
-        path: 'customers/:id',
+        path: 'customers/customer/:id',
         component: CustomerDetailsComponent,
+      },
+      {
+        path: 'customers/addcustomer',
+        component: CreateCustomerComponent,
+      },
+      {
+        path: 'customers/updatecustomer/:id',
+        component: UpdateCostumerComponent,
       },
     ],
   },

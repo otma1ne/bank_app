@@ -50,3 +50,9 @@
         font-size: 14px;
     }
 }
+
+/* Global style */
+
+* {
+    outline: none;
+}

@@ -1,20 +1,13 @@
 {
   "customers": [
     {
-      "id": "2da6cbc8-3240-4bc8-b31c-60f62564fe37",
-      "firstName": "Reagan",
-      "lastName": "Courtese",
-      "email": "rcourtese0@clickbank.net",
-      "gender": "Male",
-      "address": "886 Barby Point"
-    },
-    {
-      "id": "c25605e0-429a-4ac2-8304-56a1b9819e37",
       "firstName": "Pooh",
       "lastName": "Maliphant",
       "email": "pmaliphant1@illinois.edu",
       "gender": "Male",
-      "address": "1 Ilene Road"
+      "address": "1 Ilene Road",
+      "accountType": "saving",
+      "id": "c25605e0-429a-4ac2-8304-56a1b9819e37"
     },
     {
       "id": "ca32646f-e09e-462d-b1e5-76cd9eb16d87",
@@ -231,14 +224,6 @@
       "email": "dtowns@e-recht24.de",
       "gender": "Male",
       "address": "69915 Messerschmidt Circle"
-    },
-    {
-      "id": "a0299050-7a99-4eab-8d42-d0bce08f0e85",
-      "firstName": "Vale",
-      "lastName": "Gallier",
-      "email": "vgalliert@blog.com",
-      "gender": "Male",
-      "address": "3 Anniversary Court"
     }
   ]
 }

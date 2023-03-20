@@ -1,5 +1,5 @@
 <section class="py-8 px-16">
-  <h3 class="text-xl font-semibold">Customer details</h3>
+  <h3 class="text-xl font-semibold">Create Customer</h3>
   <div class="grid grid-cols-2 gap-16 mt-20">
     <div class="relative flex justify-center">
       <img
@@ -7,46 +7,86 @@
         class="absolute rounded-full w-[80%]"
       />
     </div>
-    <div class="flex flex-col gap-5" *ngIf="customer">
+    <form
+      class="flex flex-col gap-5"
+      [formGroup]="customerForm"
+      (submit)="submit()"
+    >
       <div class="flex flex-col gap-3">
         <label for="firstname" class="text-sm font-medium">Firstname</label>
         <input
           type="text"
           id="firstname"
-          readonly
-          [value]="customer.firstName"
-          class="bg-transparent border border-gray-300 text-xs px-4 py-3 rounded-lg"
+          placeholder="Enter the first name"
+          formControlName="firstName"
+          class="bg-transparent border border-gray-300 text-xs px-4 py-3 rounded-lg focus:border-regal-blue focus:border transition"
         />
+        <small
+          class="text-red-500"
+          *ngIf="
+            getControl('firstName')?.hasError('required') &&
+            getControl('firstName')?.touched
+          "
+        >
+          Firstname is required
+        </small>
       </div>
       <div class="flex flex-col gap-3">
         <label for="lastname" class="text-sm font-medium">Lastname</label>
         <input
           type="text"
           id="lastname"
-          readonly
-          [value]="customer.lastName"
+          placeholder="Enter the last name"
+          formControlName="lastName"
           class="bg-transparent border border-gray-300 text-xs px-4 py-3 rounded-lg"
         />
+        <small
+          class="text-red-500"
+          *ngIf="
+            getControl('lastName')?.hasError('required') &&
+            getControl('lastName')?.touched
+          "
+        >
+          Lastname is required
+        </small>
       </div>
       <div class="flex flex-col gap-3">
         <label for="email" class="text-sm font-medium">Email</label>
         <input
           type="email"
           id="email"
-          readonly
-          [value]="customer.email"
+          placeholder="Enter the email address"
+          formControlName="email"
           class="bg-transparent border border-gray-300 text-xs px-4 py-3 rounded-lg"
         />
+        <small
+          class="text-red-500"
+          *ngIf="
+            getControl('email')?.hasError('required') &&
+            getControl('email')?.touched
+          "
+        >
+          Email is required
+        </small>
       </div>
       <div class="flex flex-col gap-3">
         <label for="address" class="text-sm font-medium">Address</label>
         <textarea
           type="text"
           id="address"
-          readonly
-          [value]="customer.address"
+          placeholder="Enter the address"
+          formControlName="address"
           class="bg-transparent border border-gray-300 text-xs px-4 py-3 rounded-lg"
         ></textarea>
+        <small
+          class="text-red-500"
+          *ngIf="
+            getControl('address')?.hasError('required') &&
+            getControl('address')?.touched
+          "
+        >
+          Address is required
+        </small>
       </div>
       <div class="flex flex-col gap-4">
         <label class="text-sm font-medium">Gender</label>
@@ -56,9 +96,10 @@
               type="radio"
               name="gender"
               id="male"
-              disabled
-              class="accent-regal-blue disabled:!accent-regal-blue dark:accent-regal-blue"
-              [checked]="customer.gender === 'Male'"
+              checked
+              class="accent-regal-blue"
+              value="Male"
+              formControlName="gender"
             />
             <label for="male" class="text-sm">Male</label>
           </div>
@@ -67,9 +108,9 @@
               type="radio"
               name="gender"
               id="female"
-              disabled
-              [checked]="customer.gender === 'Female'"
-              class="accent-regal-blue disabled:!accent-regal-blue dark:accent-regal-blue"
+              value="Female"
+              class="accent-regal-blue"
+              formControlName="gender"
             />
             <label for="female" class="text-sm">Female</label>
           </div>
@@ -83,9 +124,10 @@
               type="radio"
               name="accountType"
               id="saving"
-              disabled
+              checked
               class="accent-regal-blue"
-              [checked]="customer.accountType === 'saving'"
+              value="saving"
+              formControlName="accountType"
             />
             <label for="saving" class="text-sm">Saving</label>
           </div>
@@ -94,19 +136,29 @@
               type="radio"
               name="accountType"
               id="cheking"
-              disabled
+              value="cheking"
               class="accent-regal-blue"
-              [checked]="customer.accountType === 'cheking'"
+              formControlName="accountType"
             />
             <label for="cheking" class="text-sm">Cheking</label>
           </div>
         </div>
       </div>
-      <div class="flex justify-end mt-5">
-        <button class="primary-btn" (click)="navigateToCustomerList()">
-          Back to list
+      <div class="flex justify-between mt-5">
+        <button
+          class="secondary-btn border-2 border-regal-blue text-regal-blue"
+          type="reset"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          class="primary-btn disabled:opacity-50"
+          [disabled]="isLoading || !canSubmit()"
+        >
+          Add customer
         </button>
       </div>
-    </div>
+    </form>
   </div>
 </section>

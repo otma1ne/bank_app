@@ -18,7 +18,6 @@ export class SiginRouteComponent {
   }
 
   submit() {
-    console.log(this.loginForm.value.email);
     if (
       this.loginForm.value.email === 'admin@gmail.com' &&
       this.loginForm.value.password === 'admin'
