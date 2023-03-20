@@ -1,10 +1,10 @@
-<section class="py-8 px-16">
+<section class="py-8 px-16 max-lg:px-8 max-[400px]:px-4">
   <h3 class="text-xl font-semibold">Customer details</h3>
-  <div class="grid grid-cols-2 gap-16 mt-20">
+  <div class="grid grid-cols-2 gap-16 mt-20 max-md:grid-cols-1 max-md:grid-rows-[200px_auto] max-md:mt-10 max-md:gap-8">
     <div class="relative flex justify-center">
       <img
         src="../../../../../assets/images/profil-lg.png"
-        class="absolute rounded-full w-[80%]"
+        class="absolute rounded-full w-[80%] max-md:w-auto max-md:h-[100%]"
       />
     </div>
     <div class="flex flex-col gap-5" *ngIf="customer">
@@ -102,7 +102,7 @@
           </div>
         </div>
       </div>
-      <div class="flex justify-end mt-5">
+      <div class="flex justify-end mt-5 flex-wrap gap-4">
         <button class="primary-btn" (click)="navigateToCustomerList()">
           Back to list
         </button>

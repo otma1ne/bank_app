@@ -12,8 +12,8 @@ export class SiginRouteComponent {
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required]],
-      password: ['', [Validators.required]],
+      email: ['admin@gmail.com', [Validators.required]],
+      password: ['admin', [Validators.required]],
     });
   }
 
@@ -27,7 +27,7 @@ export class SiginRouteComponent {
   }
 
   canSubmit(): boolean {
-    return this.loginForm.dirty && this.loginForm.valid;
+    return this.loginForm.valid;
   }
 
   getControl(controlName: string) {

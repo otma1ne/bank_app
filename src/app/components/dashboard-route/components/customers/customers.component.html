@@ -1,20 +1,20 @@
-<section class="py-8 px-16">
-  <div class="flex justify-between">
+<section class="py-8 px-16 max-lg:px-8 max-[400px]:px-4">
+  <div class="flex justify-between flex-wrap gap-3">
     <h3 class="text-xl font-semibold">Customers</h3>
     <button class="primary-btn flex items-center gap-2" routerLink="./addcustomer"> <i-bs name="plus-lg" class="text-white" /> Add Customer</button>
   </div>
   <div class="flex justify-end">
-    <input type="text" name="" id="" placeholder="Search for a customer..." class="text-sm px-4 py-2 rounded-xl w-80 bg-gray-50 border border-gray-50 mt-14 focus:border-regal-blue focus:border transition" (input)="onQuery($event)" />
+    <input type="text" name="" id="" placeholder="Search for a customer..." class="text-sm px-4 py-2 rounded-xl w-full bg-gray-50 border border-gray-50 mt-14 focus:border-regal-blue focus:border transition max-w-sm" (input)="onQuery($event)" />
   </div>
   <div
     class="table w-full mt-4 shadow-[0px_0px_20px_10px_#F7FAFC] border rounded-lg px-8"
   >
     <div class="table-header-group text-sm font-semibold">
       <div class="table-row">
-        <div class="table-cell text-left !py-5">Picture</div>
+        <div class="table-cell text-left !py-5 max-lg:hidden">Picture</div>
         <div class="table-cell text-left !py-5">Firstname</div>
-        <div class="table-cell text-left">lastname</div>
-        <div class="table-cell text-left">email</div>
+        <div class="table-cell text-left max-lg:hidden">lastname</div>
+        <div class="table-cell text-left max-sm:hidden">email</div>
         <div class="table-cell text-right">actions</div>
       </div>
     </div>
@@ -23,7 +23,7 @@
         *ngFor="let customer of customers; let index = index"
         class="table-row text-sm font-medium "
       >
-        <div class="table-cell !py-4">
+        <div class="table-cell !py-4 max-lg:hidden">
           <img
             src="../../../../../assets/images/profil.png"
             class="w-8 h-8 rounded-full"
@@ -32,8 +32,8 @@
         <div class="table-cell !py-4 align-middle">
           {{ customer.firstName }}
         </div>
-        <div class="table-cell align-middle">{{ customer.lastName }}</div>
-        <div class="table-cell align-middle">{{ customer.email }}</div>
+        <div class="table-cell align-middle max-lg:hidden">{{ customer.lastName }}</div>
+        <div class="table-cell align-middle max-sm:hidden">{{ customer.email }}</div>
         <div class="table-cell align-middle">
           <div class="flex justify-end gap-4 text-gray-700">
             <i-bs name="list" class="cursor-pointer" [routerLink]="['./customer/', customer?.id]"></i-bs>

@@ -224,6 +224,15 @@
       "email": "dtowns@e-recht24.de",
       "gender": "Male",
       "address": "69915 Messerschmidt Circle"
+    },
+    {
+      "firstName": "Ouali",
+      "lastName": "Otmane",
+      "email": "othmanou01@gmail.com",
+      "gender": "Male",
+      "address": "teeest",
+      "accountType": "saving",
+      "id": "wliXb06"
     }
   ]
 }

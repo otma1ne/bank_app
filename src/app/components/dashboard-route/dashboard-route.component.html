@@ -1,8 +1,8 @@
-<div class="w-full h-screen grid grid-cols-[260px_1fr]">
+<div class="w-full h-screen grid grid-cols-[260px_1fr] max-lg:grid-cols-[auto_1fr]">
   <app-sidebar></app-sidebar>
   <div>
     <app-navbar-dash></app-navbar-dash>
-    <div class="h-[calc(100vh-119px)] overflow-y-auto">
+    <div class="h-[calc(100vh-119px)] overflow-y-auto max-sm:h-[calc(100vh-77px)]">
       <router-outlet />
     </div>
   </div>
