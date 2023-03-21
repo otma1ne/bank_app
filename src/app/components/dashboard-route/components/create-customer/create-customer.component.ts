@@ -20,10 +20,12 @@ export class CreateCustomerComponent {
     private customerService: CustomerService
   ) {
     this.customerForm = this.formBuilder.group({
+      id: '',
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required]],
       gender: ['Male', [Validators.required]],
+      amount: [0, [Validators.required]],
       address: ['', [Validators.required]],
       accountType: ['saving', [Validators.required]],
     });
@@ -31,6 +33,8 @@ export class CreateCustomerComponent {
 
   submit() {
     this.isLoading = true;
+    this.customerForm.patchValue({ id: this.generateUUID() });
+    console.log(this.customerForm.value);
     this.customerService
       .createCustomer(this.customerForm.value)
       .subscribe((customer: Customer) => {
@@ -46,5 +50,16 @@ export class CreateCustomerComponent {
 
   getControl(controlName: string) {
     return this.customerForm.get(controlName);
+  }
+
+  generateUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
+      /[xy]/g,
+      function (c) {
+        var r = (Math.random() * 16) | 0,
+          v = c == 'x' ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+      }
+    );
   }
 }

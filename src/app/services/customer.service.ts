@@ -24,7 +24,7 @@ export class CustomerService {
     return this.http.get<Customer[]>(`${API_URL}?q=${name}`);
   }
 
-  createCustomer(customerFormData: CustomerFormData): Observable<Customer> {
+  createCustomer(customerFormData: Customer): Observable<Customer> {
     return this.http.post<Customer>(API_URL, customerFormData);
   }
 

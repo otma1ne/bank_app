@@ -26,6 +26,7 @@ export class UpdateCostumerComponent {
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required]],
       gender: ['Male', [Validators.required]],
+      amount: [0, [Validators.required]],
       address: ['', [Validators.required]],
       accountType: ['saving', [Validators.required]],
     });
@@ -46,6 +47,7 @@ export class UpdateCostumerComponent {
             lastName: customer.lastName,
             email: customer.email,
             gender: customer.gender || 'Male',
+            amount: customer.amount,
             address: customer.address,
             accountType: customer.accountType || 'saving',
           });

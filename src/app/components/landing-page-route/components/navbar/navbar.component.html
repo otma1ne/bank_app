@@ -6,20 +6,16 @@
       class="flex items-center grow w-56 cursor-pointer"
       (click)="navigateToHome()"
     >
-      <img
-        src="../../../assets/images/sitelogo-300x58.png"
-        alt=""
-        class="h-7"
-      />
+      <img src="../../../assets/images/logo-white.png" alt="" class="h-10" />
     </div>
     <ul
       class="flex items-center justify-center gap-10 grow text-sm font-medium max-lg:fixed top-0 max-lg:h-screen max-lg:bg-dark-bg max-lg:flex-col max-lg:items-start max-lg:w-[30%] max-lg:min-w-[260px] max-lg:py-24 max-lg:px-8 max-lg:justify-start max-lg:-right-[100%]"
     >
-      <li>Home</li>
-      <li>About</li>
-      <li>Pricing</li>
-      <li>How it works</li>
-      <li>Contact</li>
+      <li class="cursor-pointer">Home</li>
+      <li class="cursor-pointer">About</li>
+      <li class="cursor-pointer">Pricing</li>
+      <li class="cursor-pointer">How it works</li>
+      <li class="cursor-pointer">Contact</li>
     </ul>
     <div class="flex gap-6 grow w-56 justify-end max-lg:hidden">
       <button class="primary-btn" (click)="navigateToSignin()">

@@ -1,7 +1,9 @@
 <section class="py-8 px-16 max-lg:px-8 max-[400px]:px-4">
   <div class="flex flex-col gap-5">
     <h3 class="text-xl font-semibold">Dashboard</h3>
-    <div class="grid grid-cols-[0.5fr_0.5fr_1fr] gap-5 mt-10 max-lg:grid-cols-[1fr_1fr] max-sm:grid-cols-[1fr]">
+    <div
+      class="grid grid-cols-[0.5fr_0.5fr_1fr] gap-5 mt-10 max-lg:grid-cols-[1fr_1fr] max-sm:grid-cols-[1fr]"
+    >
       <div
         class="shadow-[0px_0px_20px_10px_#F7FAFC] border rounded-lg px-5 py-7"
       >
@@ -18,7 +20,7 @@
         <h3 class="font-semibold">Balance</h3>
         <h1 class="text-3xl font-semibold mt-3 flex items-center gap-2">
           <i-bs name="currency-dollar" width="2rem" height="2rem"></i-bs>
-          1301.23 <span class="text-green-400 text-sm">+12%</span>
+          {{ amount }} <span class="text-green-400 text-sm">+12%</span>
         </h1>
         <p class="mt-5 text-[10px]">Updated approximately every 15 minutes</p>
       </div>
